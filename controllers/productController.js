@@ -39,6 +39,8 @@ exports.createProduct = async (req, res) => {
   }
 };
 
+console.log(typeof exports.createProduct, "controller");
+
 exports.updateProduct = async (req, res) => {
   try {
     const product = await Product.findByIdAndUpdate(req.params.id, req.body, {
